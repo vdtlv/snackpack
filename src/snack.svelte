@@ -54,6 +54,7 @@
     <span>{currentWeight} г • {currentCal} Ккал</span>
   </div>
   <div class="act">
+    <!-- svelte-ignore a11y-missing-attribute -->
     <a on:click={() => (showModal = true)}>Подробнее</a>
     <div class="counter">
       {#if amount}
