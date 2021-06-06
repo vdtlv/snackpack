@@ -10,10 +10,7 @@
 
 <style>
   header {
-    background-color: white;
-    height: 64px;
-    width: 100vw-64px;
-
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
