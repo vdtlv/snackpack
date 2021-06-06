@@ -2,7 +2,7 @@
   import { debug, each } from "svelte/internal";
   import Header from "./header.svelte";
   import { fade, fly } from "svelte/transition";
-  import Modal from "./Modal.svelte";
+  import Modal from "./modal.svelte";
   import Test from "./test.svelte";
 
   // todo: json
