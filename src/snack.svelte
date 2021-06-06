@@ -6,21 +6,25 @@
   export let name;
   export let weight;
   export let cal;
-  let amount = 0;
+  export let amount;
+  export let currentWeight;
+  export let currentCal;
   $: currentWeight = amount ? weight * amount : weight;
   $: currentCal = amount ? cal * amount : cal;
 
-  let subtotal = 0;
-  $: subtotal = amount ? (subtotal += currentCal) : (subtotal = 0);
-  console.log(currentWeight);
-  console.dir(currentCal);
-  console.log(subtotal);
+  const plus = () => {
+    amount += 1;
+    amount = amount;
+  };
+  //  const minus = () => {
+  //    amount -= 1;
+  //  };
 </script>
 
 {#if showModal}
   <Modal on:close={() => (showModal = false)}>
     <h2 slot="header">
-      modal
+      {amount} modal
       <small><em>adjective</em> mod·al \ˈmō-dəl\</small>
     </h2>
 
@@ -68,7 +72,7 @@
           {amount}
         </h2>
       {/if}
-      <button class="incr" on:click={() => (amount += 1)} />
+      <button class="incr" on:click={plus} />
     </div>
   </div>
 </div>
