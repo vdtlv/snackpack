@@ -65,7 +65,7 @@
   {@debug snacks}
 
   <Header total_calories={local_sum} />
-  {#each v1 as { b }, i}
+  <!--  {#each v1 as { b }, i}
     {i + 1}: {b} .
 
     <button
@@ -82,7 +82,7 @@
   {/each}
   ok
   {local_sum}
-
+-->
   {#if showModal}
     <Modal on:close={() => (showModal = false)}>
       <h2 slot="header">
@@ -169,8 +169,8 @@
     border: none;
     background-color: #58be34;
     font-size: 20px;
-    height: 1.05em;
-    width: 1.05em;
+    height: 24px;
+    width: 24px;
     border-radius: 100%;
     position: relative;
   }
@@ -205,8 +205,8 @@
     border: none;
     background-color: #c4c4c4;
     font-size: 20px;
-    height: 1.05em;
-    width: 1.05em;
+    height: 24px;
+    width: 24px;
     border-radius: 100%;
     position: relative;
   }
